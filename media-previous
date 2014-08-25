@@ -8,7 +8,7 @@
 # and store into apps array
 apps=(`qdbus | grep org.mpris.MediaPlayer2 | sed 's/.*\.//'`)
 
-# For each application send the "PlayPause" command
+# For each application send the "Previous" command
 for app in "${apps[@]}"
   do    
         qdbus org.mpris.MediaPlayer2.$app /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
